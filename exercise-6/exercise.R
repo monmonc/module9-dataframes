@@ -35,7 +35,7 @@ score.with.most.yards <- husky.scores[combined.yards == max(combined.yards)]
 # Define a function `MostYardsScore` that takes in an argument `games` (a data frame) and
 # returns a descriptive sentence about the game that was played that had the most yards scored in it.
 MostYardScore <- function(games) {
-  sentence <- ""
+  sentence <- "The game that was played that "
   return sentence
 }
 

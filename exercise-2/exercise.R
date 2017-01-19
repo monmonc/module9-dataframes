@@ -19,23 +19,23 @@ salaries <- data.frame(employees, salaries.2014, salaries.2015, stringsAsFactors
 salaries$raise <- salaries.2015 - salaries.2014
 
 # Create a column 'got.raise' that is TRUE if the person got a raise
-got.raise <- salaries$raise > 0
+salaries$got.raise <- salaries$raise > 0
 
 ### Retrieve values from your data frame to answer the following questions
 ### Note that you should get the value as specific as possible (e.g., a single
 ### cell rather than the whole row!)
 
 # What was the 2015 salary of employee 57
-employee.57.2015.salary <- 
+employee.57.2015.salary <- salaries[57, "salaries.2015"]
 
 # How many employees got a raise?
-
+sum(salaries$got.raise)
 
 # What was the value of the highest raise?
-
+salaries$raise[salaries$raise == max(salaries$raise)]
 
 # What was the "name" of the employee who received the highest raise?
-
+salaries$employees[salaries$raise == max(salaries$raise)]
 
 # What was the largest decrease in salaries between the two years?
 
